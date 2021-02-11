@@ -11,7 +11,7 @@ let token = process.env.TOKEN;
 let key = process.env.KEY;
 
 
-const whitelist = ['http://localhost:3000'​, 'http://localhost:5000'​, 'https://weather-yelp-app.herokuapp.com/'​]
+const whitelist = ['http://localhost:3000'​, 'http://localhost:5000'​, 'https://weather-yelp.herokuapp.com/'​]
 const corsOptions = {
   origin: function (origin, callback) {
     console.log("** Origin of request " + origin)
