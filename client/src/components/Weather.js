@@ -8,6 +8,10 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSearch } from "@fortawesome/free-solid-svg-icons";
 import scriptLoader from "react-async-script-loader";
 
+
+const { REACT_APP_KEY } = process.env;
+
+
 library.add(faSearch);
 function Weather({ handleSubmit, isScriptLoaded, isScriptLoadSucceed }) {
 	const [address, setAddress] = React.useState("");
@@ -16,6 +20,7 @@ function Weather({ handleSubmit, isScriptLoaded, isScriptLoadSucceed }) {
 		lng: null,
 	});
 
+	
 	const handleChange = (value) => {
 		setAddress(value);
 	};
@@ -79,5 +84,5 @@ function Weather({ handleSubmit, isScriptLoaded, isScriptLoadSucceed }) {
 }
 
 export default scriptLoader([
-	`https://maps.googleapis.com/maps/api/js?key=AIzaSyAdjCck2Sns4vUNqVAqimDhZITv34DKVVQ&libraries=places`,
+	`https://maps.googleapis.com/maps/api/js?key=${REACT_APP_KEY}&libraries=places`,
 ])(Weather);
