@@ -1,0 +1,536 @@
+/*FONTS*/
+@font-face {
+  font-family: 'Muli';
+  src: url("../fonts/Muli.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: 'Montserrat-Regular';
+  src: url("../fonts/Montserrat/Montserrat-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: 'Montserrat-Medium';
+  src: url("../fonts/Montserrat/Montserrat-Medium.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: 'Montserrat-Light';
+  src: url("../fonts/Montserrat/Montserrat-Light.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: 'Montserrat-SemiBold';
+  src: url("../fonts/Montserrat/Montserrat-SemiBold.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: 'OpenSans-Regular';
+  src: url("../fonts/Open_Sans/OpenSans-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: 'Gilroy-Light';
+  src: url("../fonts/Gilroy-Light.otf") format("opentype");
+}
+
+@font-face {
+  font-family: 'Gilroy-Medium';
+  src: url("../fonts/Gilroy-Medium.woff") format("woff");
+}
+
+@font-face {
+  font-family: 'Gilroy-ExtraBold';
+  src: url("../fonts/Gilroy-ExtraBold.otf") format("opentype");
+}
+
+* {
+  font-family: 'Gilroy-Light';
+  font-weight: 200;
+  letter-spacing: 1px;
+}
+
+html, body {
+  max-width: 100%;
+  min-height: 500px;
+  background: #FBFCFF;
+  overflow-x: hidden;
+}
+
+h2 {
+  font-family: 'Gilroy-Medium';
+  letter-spacing: 2px;
+}
+
+/*---- MOBILE ONLY ----*/
+.sample-section {
+  height: 800px !important;
+  background: #88d2f0;
+}
+
+/* TOP SECTION */
+.top-section {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: white;
+  color: #4966ba;
+}
+
+.top-section.current {
+  color: #4966ba;
+  background-position: 50% 50%;
+  background-color: #b1bfd8;
+  background-image: linear-gradient(315deg, #b1bfd8 0%, #6782b4 74%);
+  background-position: center;
+  background-size: cover;
+  /* Add the blur effect */
+  /* Full height */
+  height: 100%;
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.top-section .search-bar {
+  padding-bottom: 32px;
+  width: 80%;
+}
+
+.top-section .search-bar form input[type=search] {
+  width: 100%;
+  text-indent: 50px;
+  border-radius: 50px;
+  border: 1px solid #f3f3f3;
+  padding: 18px;
+  margin-right: 10px;
+  font-size: 14px;
+  outline: none;
+}
+
+.top-section .search-bar form input[type=search]::-webkit-search-cancel-button {
+  -webkit-appearance: none;
+  height: 20px;
+  width: 20px;
+  border-radius: 10px;
+  color: white;
+  background: #fbfdff;
+}
+
+.top-section .search-bar form .search-button {
+  position: relative;
+  color: white;
+  left: 16px;
+  top: 42px;
+  background: #88d2f0;
+  padding: 8px;
+  border-radius: 50%;
+}
+
+.top-section .search-bar form .none {
+  display: none;
+}
+
+.top-section .search-bar .drop-down div {
+  font-weight: bold;
+  padding: 16px;
+}
+
+.top-section .search-bar .drop-down div:last-child {
+  border-radius: 0 0 24px 24px;
+}
+
+.top-section .current-weather {
+  text-align: center;
+  margin-top: 50px;
+  z-index: 1000;
+  color: #fbfdff;
+  height: 620px;
+  padding: 32px 32px 64px 32px;
+}
+
+.top-section .current-weather ul {
+  padding: 0;
+  list-style-type: none;
+}
+
+.top-section .current-weather img {
+  display: block;
+  margin: auto;
+}
+
+.top-section .current-weather .weather-bar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 32px;
+  font-size: 12px;
+}
+
+.top-section .current-weather .weather-bar .weather-bar-element {
+  margin: 8px;
+}
+
+.top-section .current-weather .weather-bar .weather-bar-element :nth-child(2) {
+  font-weight: bold;
+}
+
+.top-section .current-weather .weather-bar .weather-bar-element svg {
+  color: #e7e7de;
+  font-size: 20px;
+  margin-bottom: 8px;
+}
+
+.top-section .current-weather .weather-bar .weather-bar-element p {
+  font-size: 12px;
+  text-transform: uppercase;
+  padding-bottom: 8px;
+  white-space: nowrap;
+}
+
+.top-section .current-weather .today-current-weather h2, .top-section .current-weather .today-current-weather h3 {
+  font-family: 'Gilroy-Light';
+  text-transform: uppercase;
+  font-size: 28px;
+  margin-top: 0;
+}
+
+.top-section .current-weather .today-current-weather h3 {
+  margin-bottom: -8px;
+}
+
+.top-section .current-weather .today-current-weather p {
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+.top-section .current-weather .today-current-weather .temperature-section {
+  padding: 32px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.top-section .current-weather .today-current-weather .temperature-section .temperature {
+  color: #88d2f0;
+  font-size: 80px;
+  font-family: 'Gilroy-Light';
+  font-weight: bold;
+}
+
+.top-section .current-weather .today-current-weather .temperature-section span, .top-section .current-weather .today-current-weather .temperature-section p {
+  text-transform: capitalize;
+}
+
+.sample-section .weeks-weather-places .search-bar-desktop {
+  display: none;
+}
+
+.top-section .week-weather {
+  background-color: #fbfdff;
+  width: 100%;
+  padding-top: 24px;
+  margin-top: -100px;
+  /* CHECK THIS*/
+  border-radius: 48px 48px 0 0;
+}
+
+.top-section .week-weather .weeks-weather-header h2 {
+  font-weight: bold;
+  color: #23364d;
+  padding: 0px 0px 16px 16px;
+}
+
+.top-section .week-weather .weeks-weather {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  margin-bottom: 40px;
+  margin-top: -16px;
+  color: white;
+}
+
+.top-section .week-weather .weeks-weather ul {
+  padding: 0px;
+  font-size: 12px;
+  color: #23364d;
+  list-style-type: none;
+  width: 50%;
+}
+
+.top-section .week-weather .weeks-weather ul li {
+  text-align: center;
+  line-height: 16px;
+}
+
+.top-section .week-weather .weeks-weather ul li i {
+  color: #88d2f0;
+}
+
+.top-section .week-weather .weeks-weather ul li:first-child {
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.top-section .week-weather .weeks-weather ul li:nth-child(3) {
+  font-weight: bold;
+}
+
+.top-section .week-weather .weeks-weather ul li img {
+  width: 100%;
+  display: block;
+  margin: auto;
+}
+
+.places-header {
+  padding-top: 16px;
+  background: #e9f4fc;
+}
+
+.places-header h2 {
+  color: #23364d;
+  margin-bottom: -8px;
+  padding-left: 16px;
+  padding-bottom: 16px;
+  font-weight: bold;
+}
+
+.places-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: #e9f4fc;
+}
+
+.places-container .places {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 16px;
+  cursor: pointer;
+}
+
+.places-container .places p {
+  font-family: 'Gilroy-Medium';
+  color: #fbfdff;
+  text-transform: uppercase;
+  font-size: 13px;
+  letter-spacing: 2px;
+  line-height: 24px;
+  font-weight: bold;
+}
+
+.places-container .places img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 24px;
+  width: 100%;
+  height: 225px;
+  -webkit-box-shadow: 0px 8px 8px 0px #c4d4ee;
+          box-shadow: 0px 8px 8px 0px #c4d4ee;
+}
+
+.places-container .places .bottom-left {
+  color: black;
+  font-weight: bold;
+  position: absolute;
+  bottom: 40px;
+  left: 24px;
+}
+
+.places-container .places .bottom-left span {
+  font-family: 'Gilroy-Medium';
+  color: #23364d;
+  margin-left: 8px;
+}
+
+.places-container .places .bottom-left .title::before {
+  content: "\f3c5";
+  font-family: "Font Awesome 5 Free";
+  font-size: 20px;
+}
+
+.places-container .places .stars {
+  background: rgba(246, 245, 245, 0.9);
+  padding: 8px;
+  border-radius: 8px;
+  width: 160px;
+}
+
+.places-container .places .stars-outer {
+  position: relative;
+  display: inline-block;
+  margin-left: 8px;
+}
+
+.places-container .places .stars-inner {
+  position: absolute;
+  top: 0;
+  left: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  width: 0;
+}
+
+.places-container .places .stars-outer::before {
+  content: "\f005  \f005  \f005  \f005  \f005";
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  color: #ccc;
+}
+
+.places-container .places .stars-inner::before {
+  content: "\f005  \f005  \f005  \f005  \f005";
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  color: #f8ce0b;
+}
+
+/* DESKTOP AND TABLET*/
+@media (min-width: 801px) {
+  .sample-section .weeks-weather-places {
+    background: white !important;
+  }
+  .sample-section .weeks-weather-places .search-bar-desktop {
+    display: block;
+    margin-bottom: 100px;
+    margin-top: 20px;
+  }
+  .top-section .week-weather .weeks-weather {
+    margin-bottom: 100px;
+  }
+  .top-section .week-weather .weeks-weather ul {
+    font-size: 14px;
+  }
+  .top-section .week-weather .weeks-weather ul li {
+    line-height: 24px;
+  }
+  .sample-section {
+    height: 2800px !important;
+  }
+  .sample-section .search-bar-mobile {
+    display: none;
+  }
+  .top-section .current-weather .weather-bar .weather-bar-element svg {
+    font-size: 24px;
+  }
+  .top-section .current-weather .weather-bar .weather-bar-element p {
+    font-size: 16px;
+  }
+  .sample-section {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  .sample-section .search-bar-mobile {
+    display: none !important;
+  }
+  .sample-section .top-section .current-weather {
+    height: 2000px;
+    margin-top: 150px;
+  }
+  .sample-section .top-section .week-weather {
+    border-radius: 0px;
+  }
+  .sample-section .top-section.current {
+    width: 50%;
+  }
+  .weather-bar .weather-bar-element {
+    margin-right: 16px !important;
+  }
+  .weather-bar .weather-bar-element p {
+    white-space: nowrap;
+  }
+  .top-section .week-weather .weeks-weather-header h2 {
+    padding: 0px 0px 16px 40px;
+  }
+  .places-header {
+    border-radius: 32px 32px 0 0;
+  }
+  .places-header h2 {
+    padding-left: 40px;
+    font-weight: bold;
+    letter-spacing: 2px;
+  }
+  .places-container {
+    padding: 32px;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+  .places-container .places {
+    width: 100%;
+  }
+  .places-container .places a {
+    width: 100%;
+  }
+  .places-container .places img {
+    width: 100%;
+    height: 300px;
+    -webkit-box-shadow: 0px 8px 8px 0px #c4d4ee;
+            box-shadow: 0px 8px 8px 0px #c4d4ee;
+  }
+  .places-container .places img:hover {
+    -webkit-box-shadow: 0px 8px 8px 0px #acbcd6;
+            box-shadow: 0px 8px 8px 0px #acbcd6;
+  }
+  .places-container .places p, .places-container .places span {
+    color: white;
+    font-size: 18px;
+  }
+  .places-container .places .place-info {
+    bottom: 0px;
+    left: 0px;
+    height: 130px;
+    color: #f2f2f2;
+    position: absolute;
+    width: 100%;
+  }
+}
+/*# sourceMappingURL=styles.css.map */
